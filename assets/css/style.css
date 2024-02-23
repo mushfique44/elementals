@@ -1,3 +1,72 @@
-body{
-    
+/* Reset some default styles and add a basic styling to the body */
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Style for the header with logo */
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+    font-family: 'Kode Mono', monospace; /* Set the font to Kode Mono */
+    font-weight: bold; /* Make it bold */
+}
+
+.logo {
+    width: 50px; /* logo width */
+    margin-right: 10px; /* Add some spacing between the logo and text */
+    border-radius: 15%;
+}
+
+/* Style for the game area and buttons */
+.game_area {
+    display: flow-root;
+    margin-top: 20px;
+}
+
+.player_move, .comp_move {
+    text-align: center;
+}
+
+/* Style for the buttons with different background colors */
+button {
+    font-size: 20px; /* Adjust the font size of the buttons */
+    margin: 10px; /* Add spacing between buttons */
+    padding: 10px 20px; /* Adjust padding for a better visual appearance */
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.electric {
+    background-color: yellow;
+    color: black; /* Add text color for better contrast */
+}
+
+.fire {
+    background-color: red;
+    color: white; /* Add text color for better contrast */
+}
+
+.water {
+    background-color: blue;
+    color: white; /* Add text color for better contrast */
+}
+
+.earth {
+    background-color: green;
+    color: white; /* Add text color for better contrast */
+}
+
+/* Style for the score area */
+.score_area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.scores {
+    font-size: 18px;
+    margin: 5px 0;
 }
