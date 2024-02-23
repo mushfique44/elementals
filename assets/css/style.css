@@ -40,41 +40,47 @@ button {
     border-radius: 10%;
 }
 
-.electric {
+
+.btn_electric {
     background-color: yellow;
     color: black; /* Add text color for better contrast */
 }
 
-.fire {
+.btn_fire {
     background-color: red;
     color: white; /* Add text color for better contrast */
 }
 
-.water {
+.btn_water {
     background-color: blue;
     color: white; /* Add text color for better contrast */
 }
 
-.earth {
+.btn_earth {
     background-color: green;
     color: white; /* Add text color for better contrast */
 }
 
-.electric:hover {
+.btn_electric:hover {
     background-color: rgb(228, 228, 3);
+    content: attr(data-type);
 }
 
-.fire:hover {
+.btn_fire:hover {
     background-color: rgb(201, 0, 0);
+    content: attr(data-type);
 }
 
-.water:hover {
+.btn_water:hover {
     background-color: rgb(0, 0, 207);
+    content: attr(data-type);
 }
 
-.earth:hover {
+.btn_earth:hover {
     background-color: rgb(0, 90, 0);
+    content: attr(data-type);
 }
+
 
 /* Style for the score area */
 .score_area {
