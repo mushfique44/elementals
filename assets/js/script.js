@@ -6,21 +6,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "electric") {
-            alert('You Clicked Electric element');
-            } else if (this.getAttribute("data-type") === "fire") {
-                alert('You Clicked Fire element');
-            } else if (this.getAttribute("data-type") === "water") {
-                alert('You Clicked Water element');
-            } else if (this.getAttribute("data-type") === "earth") {
-                alert('You Clicked Earth element');
-            }
+            let elementChoice = this.getAttribute("data-type");
+            console.log(elementChoice);
+            runGame(elementChoice);
+            
         })
+            
     }
+
+    runGame();
 })
 
 
-function runGame() {
+function runGame(elementChoice) {
+    let randSelect = Math.floor(Math.random()* 4 + 1);
+    console.log(randSelect);
+    if (elementChoice === "electric"){
+        if (randSelect === 3) {
+            alert("Win");
+        } else if (randSelect === 4) {
+            alert("Lose");
+        } else {
+            alert("Draw");
+        }
+    } else if (elementChoice === "fire"){
+        if (randSelect === 4) {
+            alert("Win");
+        } else if (randSelect === 3) {
+            alert("Lose");
+        } else {
+            alert("Draw");
+        }
+    } else if (elementChoice === "water"){
+        if (randSelect === 2) {
+            alert("Win");
+        } else if (randSelect === 3) {
+            alert("Draw");
+        } else {
+            alert("Lose");
+        }
+    } else if (elementChoice === "earth"){
+        if (randSelect === 3) {
+            alert("Win");
+        } else if (randSelect === 2) {
+            alert("Lose");
+        } else {
+            alert("Draw");
+        }
+    }
+
+
+
 
 }
 
@@ -29,10 +65,10 @@ function playerSelection() {
 }
 
 function compRandSelection() {
-    let randSelect = Math.floor(Math.random()* 4 + 1);
+    
 }
 
-compRandSelection();
+
 
 function whoWinsRound() {
 
