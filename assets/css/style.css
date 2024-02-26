@@ -2,113 +2,132 @@
 body {
     margin: 0;
     font-family: 'Bebas Neue', sans-serif;
+    background-color: #f0f0f0; /* Add a background color for better readability */
 }
 
 /* Style for the header with logo */
 .heading {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     padding: 20px;
-    font-family: 'Kode Mono', monospace; /* Set the font to Kode Mono */
-    font-weight: bold; /* Make it bold */
+    font-family: 'Kode Mono', monospace;
+    font-weight: bold;
+    font-size: 1rem; /* Adjust font size for better readability */
+    background-color: #333; /* Add a background color for the header */
+    color: white; /* Set text color for better contrast */
+    margin-top: -1rem;
+}
+
+/* Improve responsiveness of header logo */
+.logo {
+    width: 80px;
+    margin-right: 15px;
+    border-radius: 15%; /* Make the logo circular */
+}
+
+.element_table {
+    width: 100%; /* Set the width to 100% of the parent container */
+    max-width: 500px; /* Set a maximum width to ensure it doesn't get too large */
+    height: auto; /* Maintain aspect ratio and adjust height accordingly */
+    display: block; /* Ensure it behaves as a block element */
+    margin: 0 auto; /* Center the image within its parent container */
 }
 
 .help_screen {
-    /* display: none; */
-    margin: 10%;
-    top: 5rem;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 3px 0px black;
+    display: block; /* Initially hide the help screen */
+    position: fixed; /* Fixed position for overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .help_screen_header {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+    background-color: #333; /* Add a background color for the help screen header */
+    color: white; /* Set text color for better contrast */
 }
 
-.end_game {
-    position: absolute;
-    margin: 4rem;
-    display: flow;
-    top: 9%;
-    left: 37%;
-    background-color: white;
-    height: 100rem;
-    width: 100rem;
-}
-.logo {
-    width: 50px; /* logo width */
-    margin-right: 10px; /* Add some spacing between the logo and text */
+.help_btn {
+    background-color: #dddddd;
+    padding: 0.75rem;
     border-radius: 15%;
+    color: black;
+    font-family: bold;
+}
+
+/* Improve responsiveness of end game section */
+.end_game {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px; /* Increase the padding to make it larger */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    height: 190px;
+    width: 275px
 }
 
 /* Style for the game area and buttons */
 .game_area {
-    display: flow-root;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+    justify-content: center;
+    margin: 20px auto; /* Center the game area and add spacing */
 }
 
 .player_move, .comp_move {
     text-align: center;
+    margin: 10px;
 }
 
 /* Style for the buttons with different background colors */
 button {
-    font-size: 20px; /* Adjust the font size of the buttons */
-    margin: 10px; /* Add spacing between buttons */
-    padding: 10px 20px; /* Adjust padding for a better visual appearance */
+    font-size: 18px;
+    margin: 10px;
+    padding: 12px 24px;
     border: none;
     cursor: pointer;
-    border-radius: 10%;
+    border-radius: 8px;
 }
 
+/* Simplify and improve hover effects on buttons */
+button:hover {
+    opacity: 0.8;
+}
 
 .btn_electric {
-    background-color: yellow;
-    color: black; /* Add text color for better contrast */
+    background-color: #ff0;
+    color: black;
 }
 
 .btn_fire {
-    background-color: red;
-    color: white; /* Add text color for better contrast */
+    background-color: #f00;
+    color: white;
 }
 
 .btn_water {
-    background-color: blue;
-    color: white; /* Add text color for better contrast */
+    background-color: #00f;
+    color: white;
 }
 
 .btn_earth {
-    background-color: green;
-    color: white; /* Add text color for better contrast */
-}
-
-.btn_electric:hover {
-    background-color: rgb(228, 228, 3);
-    content: attr(data-type);
-}
-
-.btn_fire:hover {
-    background-color: rgb(201, 0, 0);
-    content: attr(data-type);
-}
-
-.btn_water:hover {
-    background-color: rgb(0, 0, 207);
-    content: attr(data-type);
-}
-
-.btn_earth:hover {
-    background-color: rgb(0, 90, 0);
-    content: attr(data-type);
+    background-color: #008000;
+    color: white;
 }
 
 .round_winner {
     text-align: center;
     margin-top: 20px;
 }
+
 /* Style for the score area */
 .score_area {
     text-align: center;
@@ -116,6 +135,7 @@ button {
 }
 
 .scores {
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0;
 }
+
