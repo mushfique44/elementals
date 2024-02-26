@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
             let elementChoice = this.getAttribute("data-type");
             console.log(elementChoice);
             runGame(elementChoice);
+            if (this.getAttribute("data-type") === "reload"){
+                location.reload();
+            }
             
         })
             
@@ -169,7 +172,6 @@ function gameEnd() {
 }
 
 function restartGame() {
-    location.reload();
 }
 
 function helpScreen() {
