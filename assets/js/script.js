@@ -9,12 +9,16 @@ const lossNo = document.querySelector('.loss');
 const helpDisplay = document.querySelector('.help_screen');
 const helpBtn = document.querySelector('.help_btn')
 const helpCloseBtn = document.querySelector('.help_close');
-const endGameDisplay = document.querySelector('.end_game')
+const endGameDisplay = document.querySelector('.end_game');
+
 
 endGameDisplay.style.visibility = 'hidden';
 helpDisplay.style.visibility = 'hidden';
 helpScreenOn();
 helpScreenOff();
+
+
+
 
 
 
@@ -135,6 +139,8 @@ function incrementRound() {
     
     if (prevRound === 5) {
         gameEnd();
+        
+        
     }
 }
 
@@ -160,38 +166,31 @@ function incrementLosses() {
     
 }
 
-function gameEnd() {
-    
-
-    endGameDisplay.style.visibility = 'visible';
-
-    
-    
-    
-}
-
 function restartGame() {
-        
+    restartBtn.addEventListener('click', function(){
+        location.reload();
+          
+    })
+
 }
 
 function helpScreenOn() {
     
     helpBtn.addEventListener('click', function(){
         helpDisplay.style.visibility = 'visible'; 
-        console.log(helpDisplay.style.visibility);  
+          
     })
 
-    //console.log(helpDisplay.style.visibility);
+    
 }
 
 function helpScreenOff() {
     
     helpCloseBtn.addEventListener('click', function(){
         helpDisplay.style.visibility = 'hidden'; 
-        console.log(helpDisplay.style.visibility);  
+        
     })
 
-    //console.log(helpDisplay.style.visibility);
-
+    
 
 }
