@@ -6,6 +6,14 @@ const compSelectDisplay = document.querySelector('.comp_element');
 const roundNo = document.querySelector('.round');
 const winNo = document.querySelector('.wins');
 const lossNo = document.querySelector('.loss');
+const helpDisplay = document.querySelector('.help_screen');
+const helpBtn = document.querySelector('.help_btn')
+const helpCloseBtn = document.querySelector('.help_close');
+
+helpDisplay.style.visibility = 'hidden';
+helpScreenOn();
+helpScreenOff();
+
 
 
 //Declaring the posible outcomes of which elements win
@@ -43,12 +51,14 @@ const noWins = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
-
+    
     for (let button of buttons) {
         button.addEventListener("click", function() {
             let elementChoice = this.getAttribute("data-type");
             console.log(elementChoice);
             runGame(elementChoice);
+
+
             if (this.getAttribute("data-type") === "reload"){
                 location.reload();
             }
@@ -56,7 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
             
     }
+    
 })
+
+
 
 
 function runGame(playerSelects) {
@@ -165,6 +178,24 @@ function gameEnd() {
 function restartGame() {
 }
 
-function helpScreen() {
+function helpScreenOn() {
+    
+    helpBtn.addEventListener('click', function(){
+        helpDisplay.style.visibility = 'visible'; 
+        console.log(helpDisplay.style.visibility);  
+    })
+
+    //console.log(helpDisplay.style.visibility);
+}
+
+function helpScreenOff() {
+    
+    helpCloseBtn.addEventListener('click', function(){
+        helpDisplay.style.visibility = 'hidden'; 
+        console.log(helpDisplay.style.visibility);  
+    })
+
+    //console.log(helpDisplay.style.visibility);
+
 
 }

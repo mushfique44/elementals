@@ -15,7 +15,7 @@ body {
 }
 
 .help_screen {
-    display: none;
+    /* display: none; */
     margin: 10%;
     top: 5rem;
     position: absolute;
