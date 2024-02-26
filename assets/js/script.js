@@ -1,6 +1,9 @@
 
 //Declaring a variable to equal the electric button from HTML
 const electicButton = document.querySelector('.btn_electric');
+const playerSelectDisplay = document.querySelector('.player_element');
+const compSelectDisplay = document.querySelector('.comp_element');
+
 
 //Declaring the posible outcomes of which elements win
 const outcomes = [{
@@ -58,8 +61,8 @@ function runGame(playerSelects) {
 
     const result = whoWinsRound(playerSelects, compSelects);
 
-    alert(result);
-    
+    //alert(result);
+    document.getElementById('round_winner').textContent = result;
 
 }
 
@@ -87,45 +90,56 @@ function compRandSelection() {
 
 
 function whoWinsRound(playerSelects, compSelects) {
-    
 
     if (playerSelects === compSelects['name']) {
-        return "Draw";
+        return "You Draw";
+        
     } else if (playerSelects === compSelects['lossTo']) {
-         return "Win";
+        incrementWins();
+        return "You Win!";
+        
+
     } else if (playerSelects === compSelects['drawTo']){
-        return "Draw";
+        return "You Draw";
     } else {
-        return "Lose";
+        incrementLosses();
+        return "You Lose";
+       
     }
+
+    
 }
 
-function playerWins() {
-
-}
-
-function draw() {
-
-}
-
-function compWins() {
-
-}
-
-function whoWins() {
-
-}
-
+/**
+ * Tallying of Rounds
+ */
 function incrementRound() {
+    //Declare variable to equal the value of the ID element 'round'
+    let prevRound = parseInt(document.getElementById("round").innerText);
+    //This will set the Inner text of 'round' ID to 1 + prevWins
+    document.getElementById("round").innerText = ++prevRound;
 
 }
 
+/**
+ * Tallying of Wins
+ */
 function incrementWins() {
+    //Declare variable to equal the value of the ID element 'wins'
+    let prevWins = parseInt(document.getElementById("wins").innerText);
+    //This will set the Inner text of 'wins' ID to 1 + prevWins
+    document.getElementById("wins").innerText = ++prevWins; 
 
 }
 
+/**
+ * Tallying of Losses
+ */
 function incrementLosses() {
-
+    //Declare variable to equal the value of the ID element 'loss'
+    let prevLoss = parseInt(document.getElementById("loss").innerText);
+    //This will set the Inner text of 'wins' ID to 1 + prevLoss
+    document.getElementById("loss").innerText = ++prevLoss;
 }
 
 function restartGame() {
