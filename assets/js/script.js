@@ -1,5 +1,34 @@
 
+//Declaring a variable to equal the electric button from HTML
 const electicButton = document.querySelector('.btn_electric');
+
+//Declaring the posible outcomes of which elements win
+const outcomes = [{
+    name: "electric",
+    beats: "water",
+    lossTo: "earth",
+    drawTo: "fire",
+    num: 1
+},{
+    name: "fire",
+    beats: "earth",
+    lossTo: "water",
+    drawTo: "electric",
+    num: 2
+},{
+    name: "water",
+    beats: "fire",
+    lossTo: "electric",
+    drawTo: "earth",
+    num: 3
+},{
+    name: "earth",
+    beats: "electric",
+    lossTo: "fire",
+    drawTo: "water",
+    num: 4
+},
+];
 
 // DOM loading
 // button elements and event listeners
@@ -16,18 +45,18 @@ document.addEventListener("DOMContentLoaded", function() {
         })
             
     }
-
-    runGame();
 })
 
 
-function runGame(elementChoice) {
-    let randSelect = Math.floor(Math.random()* 4 + 1);
-    console.log(randSelect);
-    
-    compRandSelection(randSelect);
+function runGame(playerSelects) {
+    let compSelects = compRandSelection();
+    console.log(compSelects['name']);
+    console.log(compSelects['beats']);
 
-    const result = whoWinsRound(elementChoice, randSelect);
+    
+    
+
+    const result = whoWinsRound(playerSelects, compSelects);
 
     alert(result);
     
@@ -35,38 +64,37 @@ function runGame(elementChoice) {
 }
 
 function playerSelection(elementChoice, electicButton) {
+    let playerSelects = elementChoice;
     document.getElementById('player_element').textContent = elementChoice;
 
 }
 
-function compRandSelection(randSelect) {
-    const elements = ["Electric", "Fire", "Water", "Earth"];
-
-    if (randSelect === 1) {
-        document.getElementById('comp_element').textContent = "Electric";
-    } else if (randSelect === 2) {
-        document.getElementById('comp_element').textContent = "Fire";
-    } else if (randSelect === 3) {
-        document.getElementById('comp_element').textContent = "Water";
-    } else if (randSelect === 4) {
-        document.getElementById('comp_element').textContent = "Earth";
-    }
+function compRandSelection() {
+    let randSelect = outcomes[Math.floor(Math.random()* outcomes.length)];
+    return randSelect;
+    //document.getElementById('comp_element').textContent = ;
+    // if (randSelect === 1) {
+    //     document.getElementById('comp_element').textContent = "Electric";
+    // } else if (randSelect === 2) {
+    //     document.getElementById('comp_element').textContent = "Fire";
+    // } else if (randSelect === 3) {
+    //     document.getElementById('comp_element').textContent = "Water";
+    // } else if (randSelect === 4) {
+    //     document.getElementById('comp_element').textContent = "Earth";
+    // }
 }
 
 
 
-function whoWinsRound(elementChoice, randSelect) {
-    const outcomes = {
-        "electric": { beats: 3, losesTo: 4 },
-        "fire": { beats: 4, losesTo: 3 },
-        "water": { beats: 2, losesTo: 1 },
-        "earth": { beats: 1, losesTo: 2 }
-    };
+function whoWinsRound(playerSelects, compSelects) {
+    
 
-    if (elementChoice === randSelect) {
+    if (playerSelects === compSelects['name']) {
         return "Draw";
-    } else if (randSelect === outcomes[elementChoice].beats) {
-        return "Win";
+    } else if (playerSelects === compSelects['lossTo']) {
+         return "Win";
+    } else if (playerSelects === compSelects['drawTo']){
+        return "Draw";
     } else {
         return "Lose";
     }
