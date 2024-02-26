@@ -23,7 +23,7 @@
     <div class="game_area">
         <div class="player_move">
             <h2>Choose your element: </h2>
-            <div id="player_element">
+            <div class="player_element">
                 <button class="btn btn_electric" data-type="electric">
                     <i class="fa-solid fa-bolt"></i>
                 </button>
@@ -40,7 +40,7 @@
         </div>
         <div class="comp_move">
             <h2>Computer picks element: </h2> 
-            <div id="comp_element">
+            <div class="comp_element">
             <div class="btn btn_comp_electric" data-type="electric">
                 <i class="fa-solid fa-bolt"></i>
             </div>
@@ -56,7 +56,9 @@
             </div>
         </div>
     </div>
-
+    <div class="round_winner">
+        <p>Winner of the round: <span id="round_winner"></span></p>
+    </div>
     <div class="score_area">
         <h3 class="scores">Rounds: <span id="round">0</span></h3>
         <p class="scores">Wins <span id="wins">0</span></p>

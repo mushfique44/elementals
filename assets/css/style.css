@@ -81,7 +81,10 @@ button {
     content: attr(data-type);
 }
 
-
+.round_winner {
+    text-align: center;
+    margin-top: 20px;
+}
 /* Style for the score area */
 .score_area {
     text-align: center;
