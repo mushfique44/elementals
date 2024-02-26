@@ -6,6 +6,7 @@ const compSelectDisplay = document.querySelector('.comp_element');
 const roundNo = document.querySelector('.round');
 const winNo = document.querySelector('.wins');
 const lossNo = document.querySelector('.loss');
+const endGameWinner = document.querySelector('.disp_winner');
 const helpDisplay = document.querySelector('.help_screen');
 const helpBtn = document.querySelector('.help_btn')
 const helpCloseBtn = document.querySelector('.help_close');
@@ -131,7 +132,7 @@ function whoWinsRound(playerSelects, compSelects) {
 /**
  * Tallying of Rounds
  */
-function incrementRound() {
+function incrementRound(prevWins) {
     //Declare variable to equal the value of the ID element 'round'
     let prevRound = parseInt(roundNo.innerText);
     //This will set the Inner text of 'round' ID to 1 + prevWins
@@ -139,8 +140,13 @@ function incrementRound() {
     
     if (prevRound === 5) {
         gameEnd();
-        
-        
+        if (parseInt(incrementWins()-1) === parseInt(incrementLosses()-1)){
+            endGameWinner.textContent = "Draw. you both lose.";
+        } else if (parseInt(incrementWins()-1) > parseInt(incrementLosses()-1)){
+            endGameWinner.textContent = "YOU! Congrats."
+        } else {
+            endGameWinner.textContent = "Computer :("
+        }
     }
 }
 
@@ -152,6 +158,7 @@ function incrementWins() {
     let prevWins = parseInt(winNo.innerText);
     //This will set the Inner text of 'wins' ID to 1 + prevWins
     winNo.innerText = ++prevWins;
+    return prevWins;
     
 }
 
@@ -163,16 +170,15 @@ function incrementLosses() {
     let prevLoss = parseInt(lossNo.innerText);
     //This will set the Inner text of 'wins' ID to 1 + prevLoss
     lossNo.innerText = ++prevLoss;
+    return prevLoss;
     
 }
 
-function restartGame() {
-    restartBtn.addEventListener('click', function(){
-        location.reload();
-          
-    })
-
+function gameEnd() {
+    endGameDisplay.style.visibility = 'visible';
 }
+
+
 
 function helpScreenOn() {
     
