@@ -9,7 +9,9 @@ const lossNo = document.querySelector('.loss');
 const helpDisplay = document.querySelector('.help_screen');
 const helpBtn = document.querySelector('.help_btn')
 const helpCloseBtn = document.querySelector('.help_close');
+const endGameDisplay = document.querySelector('.end_game')
 
+endGameDisplay.style.visibility = 'hidden';
 helpDisplay.style.visibility = 'hidden';
 helpScreenOn();
 helpScreenOff();
@@ -159,16 +161,9 @@ function incrementLosses() {
 }
 
 function gameEnd() {
-    let playerScore = parseInt(winNo.innerText);
-    let compScore = parseInt(lossNo.innerText);
+    
 
-    if (playerScore === compScore){
-        alert("Game over. Its a draw!")
-    } else if (playerScore > compScore){
-        alert("Game over. You WIN!")
-    } else {
-        alert("Game over. You Lose!")
-    }
+    endGameDisplay.style.visibility = 'visible';
 
     
     
@@ -176,6 +171,7 @@ function gameEnd() {
 }
 
 function restartGame() {
+        
 }
 
 function helpScreenOn() {

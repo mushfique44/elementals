@@ -23,6 +23,21 @@ body {
     box-shadow: 0 3px 0px black;
 }
 
+.help_screen_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.end_game {
+    position: absolute;
+    margin: 4rem;
+    display: flow;
+    top: 9%;
+    left: 37%;
+    background-color: white;
+    height: 100rem;
+    width: 100rem;
+}
 .logo {
     width: 50px; /* logo width */
     margin-right: 10px; /* Add some spacing between the logo and text */
