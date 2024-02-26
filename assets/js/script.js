@@ -64,6 +64,8 @@ function runGame(playerSelects) {
     // console.log(compSelects['name']);
     // console.log(compSelects['beats']);
 
+    document.getElementById('last_pick').textContent = playerSelects;
+    document.getElementById('comp_element').textContent = compSelects['name'];
     
     
 
@@ -74,25 +76,14 @@ function runGame(playerSelects) {
 
 }
 
-function playerSelection(elementChoice, electicButton) {
+function playerSelection(elementChoice) {
     let playerSelects = elementChoice;
-    document.getElementById('player_element').textContent = elementChoice;
 
 }
 
 function compRandSelection() {
     let randSelect = outcomes[Math.floor(Math.random()* outcomes.length)];
     return randSelect;
-    //document.getElementById('comp_element').textContent = ;
-    // if (randSelect === 1) {
-    //     document.getElementById('comp_element').textContent = "Electric";
-    // } else if (randSelect === 2) {
-    //     document.getElementById('comp_element').textContent = "Fire";
-    // } else if (randSelect === 3) {
-    //     document.getElementById('comp_element').textContent = "Water";
-    // } else if (randSelect === 4) {
-    //     document.getElementById('comp_element').textContent = "Earth";
-    // }
 }
 
 
