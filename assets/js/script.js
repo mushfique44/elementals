@@ -1,8 +1,11 @@
 
-//Declaring a variable to equal the electric button from HTML
+//Declaring variables to equal elements from the HTML
 const electicButton = document.querySelector('.btn_electric');
 const playerSelectDisplay = document.querySelector('.player_element');
 const compSelectDisplay = document.querySelector('.comp_element');
+const roundNo = document.querySelector('.round');
+const winNo = document.querySelector('.wins');
+const lossNo = document.querySelector('.loss');
 
 
 //Declaring the posible outcomes of which elements win
@@ -33,6 +36,8 @@ const outcomes = [{
 },
 ];
 
+const noWins = 0;
+
 // DOM loading
 // button elements and event listeners
 
@@ -53,16 +58,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function runGame(playerSelects) {
     let compSelects = compRandSelection();
-    console.log(compSelects['name']);
-    console.log(compSelects['beats']);
+    // console.log(compSelects['name']);
+    // console.log(compSelects['beats']);
 
     
     
 
     const result = whoWinsRound(playerSelects, compSelects);
-
     //alert(result);
     document.getElementById('round_winner').textContent = result;
+   
 
 }
 
@@ -90,7 +95,7 @@ function compRandSelection() {
 
 
 function whoWinsRound(playerSelects, compSelects) {
-
+    incrementRound();
     if (playerSelects === compSelects['name']) {
         return "You Draw";
         
@@ -115,10 +120,13 @@ function whoWinsRound(playerSelects, compSelects) {
  */
 function incrementRound() {
     //Declare variable to equal the value of the ID element 'round'
-    let prevRound = parseInt(document.getElementById("round").innerText);
+    let prevRound = parseInt(roundNo.innerText);
     //This will set the Inner text of 'round' ID to 1 + prevWins
-    document.getElementById("round").innerText = ++prevRound;
-
+    roundNo.innerText = ++prevRound;
+    
+    if (prevRound === 5) {
+        gameEnd();
+    }
 }
 
 /**
@@ -126,10 +134,10 @@ function incrementRound() {
  */
 function incrementWins() {
     //Declare variable to equal the value of the ID element 'wins'
-    let prevWins = parseInt(document.getElementById("wins").innerText);
+    let prevWins = parseInt(winNo.innerText);
     //This will set the Inner text of 'wins' ID to 1 + prevWins
-    document.getElementById("wins").innerText = ++prevWins; 
-
+    winNo.innerText = ++prevWins;
+    
 }
 
 /**
@@ -137,13 +145,31 @@ function incrementWins() {
  */
 function incrementLosses() {
     //Declare variable to equal the value of the ID element 'loss'
-    let prevLoss = parseInt(document.getElementById("loss").innerText);
+    let prevLoss = parseInt(lossNo.innerText);
     //This will set the Inner text of 'wins' ID to 1 + prevLoss
-    document.getElementById("loss").innerText = ++prevLoss;
+    lossNo.innerText = ++prevLoss;
+    
+}
+
+function gameEnd() {
+    let playerScore = parseInt(winNo.innerText);
+    let compScore = parseInt(lossNo.innerText);
+
+    if (playerScore === compScore){
+        alert("Game over. Its a draw!")
+    } else if (playerScore > compScore){
+        alert("Game over. You WIN!")
+    } else {
+        alert("Game over. You Lose!")
+    }
+
+    
+    
+    
 }
 
 function restartGame() {
-
+    location.reload();
 }
 
 function helpScreen() {
