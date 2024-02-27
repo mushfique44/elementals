@@ -1,3 +1,4 @@
+<!-- Set up HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
-
+    <!-- Call on the CSS file -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <!-- Set website title -->
     <title>Elementals</title>
 </head>
+
+<!-- Start body content -->
 <body>
+    <!-- creat h1 with class header -->
     <h1 class="heading">
+        <!-- add the image next to text 'Elementals' from assets/image folder -->
         <img class="logo" src="assets/images/NatureIcons-HQ-01.jpg" alt="logo"> Elementals
+        <!-- creat a reload button -->
         <div class="reload">
             <button class="reload" data-type="reload">
                 <i class="fa-solid fa-rotate-right"></i>
             </button>
         </div>
+        <!-- create a help "button" -->
         <div class="help">
             <div class="help_btn" data-type="help">
                 <i class="fa-solid fa-question"></i>
@@ -29,10 +36,12 @@
         
     </h1>
 
-
+    <!-- create the game area -->
     <div class="game_area">
+        <!-- create the players choice area with heading-->
         <div class="player_move">
             <h2>Choose your element: </h2>
+            <!-- creating all 4 elemental buttons to be picked from -->
             <div id="player_element">
                 <button class="btn btn_electric" data-type="electric">
                     <i class="fa-solid fa-bolt"></i>
@@ -47,12 +56,15 @@
                     <i class="fa-solid fa-leaf"></i>
                 </button>
             </div>
+            <!-- area to show players last pick -->
             <div class="last_pick">
                    You chose: <span id="last_pick"></span>
             </div>
         </div>
+        <!-- area for computers choice with header-->
         <div class="comp_move">
             <h2>Computer picks element: </h2> 
+            <!-- display the labels of all 4 elements -->
             <div id="comp_element">
             <div class="btn btn_comp_electric" data-type="electric">
                 <i class="fa-solid fa-bolt"></i>
@@ -69,22 +81,26 @@
             </div>
         </div>
     </div>
+    <!-- area to display the winner of the round -->
     <div class="round_winner">
         <p>Winner of the round: <span id="round_winner"></span></p>
     </div>
+    <!-- area to display the score of the game -->
     <div class="score_area">
         <h3 class="scores">Rounds: <span class="round">0</span></h3>
         <p class="scores">Wins <span class="wins">0</span></p>
         <p class="scores">Losses <span class="loss">0</span></p>
     </div>
-    
+    <!-- the help screen set up (will be hidden initially) -->
     <div class="help_screen">
         <div class="help_screen_header">
             <h2 class="how_to_play">How to play!</h2>
+            <!-- create a "button" to close area -->
             <div class="help_close">
                 <i class="fa-solid fa-rectangle-xmark"></i>
             </div>
         </div>
+        <!-- list out the rules of the game -->
         <ol>
             <li>Pick an Element.</li>
             <li>Computer will pick an Element.</li>
@@ -93,12 +109,13 @@
         </ol>
         <img class="element_table" src="assets/images/element_table.JPG" alt="element_table">
     </div>
+    <!-- create a screen for when the game ends after 5 rounds -->
     <div class="end_game">
         <h1 class="game_end_heading">Game Over!</h1>
         <h2 class="game_winner">The Winner is: <span class="disp_winner"></span></h2>
         <p>Thanks for playing. Click restart to play again.</p>
     </div>
-    
+    <!-- call upon the javascript code -->
     <script src="assets/js/script.js">
 
     </script>
