@@ -1,8 +1,11 @@
 /* Reset some default styles and add a basic styling to the body */
 body {
-    margin: 0;
-    font-family: 'Bebas Neue', sans-serif;
-    background-color: #f0f0f0; /* Add a background color for better readability */
+    /* Add a margin for the whole body */
+    margin: 1%;
+    /* Add defult font */
+    font-family: 'Bebas Neue', sans-serif; 
+    /* Add a background color*/
+    background-color: #f0f0f0; 
 }
 
 /* Style for the header with logo */
@@ -11,48 +14,55 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    /* Make heading different font */
     font-family: 'Kode Mono', monospace;
     font-weight: bold;
-    font-size: 1rem; /* Adjust font size for better readability */
-    background-color: #333; /* Add a background color for the header */
-    color: white; /* Set text color for better contrast */
+    font-size: 1rem;
+    background-color: #333; 
+    color: white; 
     margin-top: -1rem;
 }
 
-/* Improve responsiveness of header logo */
+/* styling header logo */
 .logo {
     width: 80px;
     margin-right: 15px;
-    border-radius: 15%; /* Make the logo circular */
+    /* Make the logo circular */
+    border-radius: 15%; 
 }
 
+/* set the table image to fit help screen */
 .element_table {
-    width: 100%; /* Set the width to 100% of the parent container */
-    max-width: 500px; /* Set a maximum width to ensure it doesn't get too large */
-    height: auto; /* Maintain aspect ratio and adjust height accordingly */
-    display: block; /* Ensure it behaves as a block element */
-    margin: 0 auto; /* Center the image within its parent container */
+    width: 100%; 
+    max-width: 500px;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
+/* style what help screen will look like */
 .help_screen {
-    display: block; /* Initially hide the help screen */
-    position: fixed; /* Fixed position for overlay */
+    display: block; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white background */
+    /* Use a semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.9); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Styling the help screen header */
 .help_screen_header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #333; /* Add a background color for the help screen header */
-    color: white; /* Set text color for better contrast */
+    background-color: #333; 
+    color: white; 
 }
 
+/* Styling the help button */
 .help_btn {
     background-color: #dddddd;
     padding: 0.75rem;
@@ -61,7 +71,7 @@ body {
     font-family: bold;
 }
 
-/* Improve responsiveness of end game section */
+/* Styling what end game section will look like */
 .end_game {
     display: block;
     position: fixed;
@@ -69,7 +79,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 40px; /* Increase the padding to make it larger */
+    padding: 40px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     height: 190px;
     width: 275px
@@ -78,11 +88,14 @@ body {
 /* Style for the game area and buttons */
 .game_area {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+    /* Allow buttons to wrap to the next line on smaller screens */
+    flex-wrap: wrap; 
     justify-content: center;
-    margin: 20px auto; /* Center the game area and add spacing */
+    /* Center the game area and add spacing */
+    margin: 20px auto; 
 }
 
+/* Styling the player and comp move played */
 .player_move, .comp_move {
     text-align: center;
     margin: 10px;
@@ -98,31 +111,36 @@ button {
     border-radius: 8px;
 }
 
-/* Simplify and improve hover effects on buttons */
+/* hover effects on buttons */
 button:hover {
     opacity: 0.8;
 }
 
+/* Setting electric buttin yellow */
 .btn_electric {
     background-color: #ff0;
     color: black;
 }
 
+/* Setting fire buttin red */
 .btn_fire {
     background-color: #f00;
     color: white;
 }
 
+/* Setting water buttin blue */
 .btn_water {
     background-color: #00f;
     color: white;
 }
 
+/* Setting earth buttin green */
 .btn_earth {
     background-color: #008000;
     color: white;
 }
 
+/* Styling the winner of the round text */
 .round_winner {
     text-align: center;
     margin-top: 20px;
@@ -134,17 +152,18 @@ button:hover {
     margin-top: 20px;
 }
 
+/* styling the score section text */
 .scores {
-    font-size: 16px;
+    font-size: 1.3rem;
     margin: 5px 0;
 }
 
 /*for when the width of the screen is larger than 768 pixels*/
 @media screen and (min-width: 768px) {
-    /* Add your styles for screens larger than 768 pixels here */
-
+    
+    /* Adjusting style*/
     .heading {
-        font-size: 3.5rem; /* Increase header font size */
+        font-size: 3.5rem; 
     }
 
     h2 {
@@ -163,6 +182,7 @@ button:hover {
         font-size: 2.5rem;
     }
 
+    /* re-align help button */
     .help_btn{
         font-size: 1rem;
         display: inline-flex;
@@ -173,6 +193,7 @@ button:hover {
         font-size: 3rem;
     }
 
+    /* reposistion end game screen */
     .end_game{
         top: 28%;
         left: 50%;
@@ -184,35 +205,42 @@ button:hover {
 
 /*for when the width of the screen is larger than 992 pixels*/
 @media screen and (min-width: 992px) {
-    /* Add your styles for screens larger than 992 pixels here */
+    /* Adjusting game area */
     .game_area {
-        margin: 30px auto; /* Increase spacing for larger screens */
+        /* Increase spacing for larger screens */
+        margin: 30px auto; 
     }   
 }
 
 /*for screens smaller than 280 pixels*/
 @media screen and (max-width: 280px) {
-    /* Add your styles for screens smaller than 280 pixels here */
+    /* Adjusting logo size */
     .logo {
-        width: 60px; /* Decrease logo size for smaller screens */
+        /* Decrease logo size for smaller screens */
+        width: 60px; 
     }
 }
 
 
-
+/*for screens skinnyier than 500 pixels and taller then 680px*/
 @media screen and (min-height: 680px) and (max-width:500px) {
+    /* adjust end game screen */
     .end_game {
         top: 38%;
     }
 }
 
+/*for screens wider than 580 pixels and shorter then 600px*/
 @media screen and (max-height: 600px) and (min-width: 580px) {
+    /* adjust end game screen */
     .end_game {
         top: 57%;
     }
 }
 
+/*for screens wider than 786 pixels and taller then 600px*/
 @media screen and (min-height: 600px) and (min-width: 768px) {
+    /* adjust end game screen */
     .end_game {
         top: 54%;
     }
