@@ -139,3 +139,82 @@ button:hover {
     margin: 5px 0;
 }
 
+/*for when the width of the screen is larger than 768 pixels*/
+@media screen and (min-width: 768px) {
+    /* Add your styles for screens larger than 768 pixels here */
+
+    .heading {
+        font-size: 3.5rem; /* Increase header font size */
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+
+    .scores{
+        font-size: 2.5rem;
+    }
+
+    .help_btn{
+        font-size: 1rem;
+        display: inline-flex;
+        transform: translate(-5%, -19%);
+    }
+
+    #comp_element {
+        font-size: 3rem;
+    }
+
+    .end_game{
+        top: 28%;
+        left: 50%;
+        height: 322px;
+        width: 400px;
+    }
+    
+}
+
+/*for when the width of the screen is larger than 992 pixels*/
+@media screen and (min-width: 992px) {
+    /* Add your styles for screens larger than 992 pixels here */
+    .game_area {
+        margin: 30px auto; /* Increase spacing for larger screens */
+    }   
+}
+
+/*for screens smaller than 280 pixels*/
+@media screen and (max-width: 280px) {
+    /* Add your styles for screens smaller than 280 pixels here */
+    .logo {
+        width: 60px; /* Decrease logo size for smaller screens */
+    }
+}
+
+
+
+@media screen and (min-height: 680px) and (max-width:500px) {
+    .end_game {
+        top: 38%;
+    }
+}
+
+@media screen and (max-height: 600px) and (min-width: 580px) {
+    .end_game {
+        top: 57%;
+    }
+}
+
+@media screen and (min-height: 600px) and (min-width: 768px) {
+    .end_game {
+        top: 54%;
+    }
+}
+
