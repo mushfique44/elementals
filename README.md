@@ -1,6 +1,9 @@
 # Elementals
 
-The Elementals is website that contains a simple rock-paper-sissors style game. The elements of this game were inspired by popular entertainment media, 'Avatar: the last airbender' and 'Pokemon'. Its a game for all demographics that can enjoy a truly simple game were the user can play against a completely random computer. 
+The Elementals is website that contains a simple rock-paper-sissors style game. The elements of this game were inspired by popular entertainment media, 'Avatar: the last airbender' and 'Pokemon'. Its a game for all demographics that can enjoy a truly simple game were the user can play against a completely random computer. The elements are representative of elements of this world from, electricity, fire, water and earth. Each element has a strength and a weakness against another element. The image below shows what these weeknesses are.
+
+![Elements Table](https://github.com/mushfique44/elementals/blob/main/media/multi_screen_media.JPG)
+
 
 These three catorgories are generalised as most popular type of workouts a person would look for, and these consists of a lean workout plan; which is to loss muscle and look more toned and fit, then there''s bulk workout plan; which is for someone looking to gain a lot of muscle, and finally there's the weight loss plan; which is for someone looking to lose fat.
 
