@@ -2,76 +2,76 @@
 
 The Elementals is website that contains a simple rock-paper-sissors style game. The elements of this game were inspired by popular entertainment media, 'Avatar: the last airbender' and 'Pokemon'. Its a game for all demographics that can enjoy a truly simple game were the user can play against a completely random computer. The elements are representative of elements of this world from, electricity, fire, water and earth. Each element has a strength and a weakness against another element. The image below shows what these weeknesses are.
 
-![Elements Table](https://github.com/mushfique44/elementals/blob/main/media/multi_screen_media.jpg)
+![Elements Table](https://github.com/mushfique44/elementals/blob/main/media/element_table.JPG)
 
+The users of this site will learn player to play a basic game, where they will pick an option of one out of four and then the computer will pick one of those same options at random, and then the game will determine who wins that round as established above in the table. The game will end after 5 rounds and the winner will be determined (a Draw is possible).This game can be played by all ages and can be played in all way, that being competitive, friendly or for fun.
 
-These three catorgories are generalised as most popular type of workouts a person would look for, and these consists of a lean workout plan; which is to loss muscle and look more toned and fit, then there''s bulk workout plan; which is for someone looking to gain a lot of muscle, and finally there's the weight loss plan; which is for someone looking to lose fat.
-
-The website also provides an option for people to sign up a personalised workout plan which will cater more to the individual and their body type.
-
-![Responsice Mockup](https://github.com/mushfique44/going-gym/blob/main/media/multi_screen_media.PNG)
+![Responsice Mockup](https://github.com/mushfique44/elementals/blob/main/media/multi_screen_media.jpg)
 
 ## Features
 
-There are five sections to this webpage:
+There are seven sections to this webpage:
 
-    The Nav bar 
-    The Hero image
-    The Workout Plans
-    The Sign up section
-    The Footer
+    The Header
+    The Help Screen 
+    The Player Choice Section
+    The Computer Choice Section
+    The Winner of the Round
+    The Scorecard
+    The End Game Screen
 
 ### Existing Features
 
-- __Navigation Bar__
+- __The Header__
 
-  - Featured at the top of the page, the full responsive navigation bar includes links to the Logo, Home, Workout Plans and Sign Up saections
-  - This section will always show no matter what section you are in and will allow the user to jump from section to section.
-  - The Nav Bar is also responsive to different screen sizes and will have a feature for smaller screen such as mobile phones, where the nave bar will be become a responsive drop down feature.
+  - Featured at the top of the page, the responsive header includes two buttons, one to restart game and one to open the help screen.
+  - The size of the header is responsive to screen size as well
 
-![Nav Bar](https://github.com/mushfique44/going-gym/blob/main/media/nav_bar.PNG)
-![Nav Bar](https://github.com/mushfique44/going-gym/blob/main/media/nav_bar_mobile.PNG)
+![Header](https://github.com/mushfique44/elementals/blob/main/media/header.jpg)
 
-- __The Hero image Section__
+- __The Help Screen__
 
-  - The hero image or landing page is an image of a gym and consists of a slogan element to the image.
-  - This section grabs the users into the purpose of the website and motivates with a powerful slogan.
+  - This screen is originally hidden and will appear when the '?' button is clicked. 
+  - This screen is greatly laidout, where it gives the rules of the game as well as an image of the possible elemental wins.
+  - To close this screen there is an 'X' button at the top right corner.
 
-![Landing Page](https://github.com/mushfique44/going-gym/blob/main/media/hero_img.PNG)
+![Help Screen](https://github.com/mushfique44/elementals/blob/main/media/help_screen.jpg)
 
-- __Workout Plans Section__
+- __Player's Choice Section__
 
-  - The Workout plans section allows the user to get straight into it and give the users three headings to look at.
-  - The users will be able to able pick between a Lean workout, a Buk workout and a Loss workout.
-  - Each plan is hidden and will expand when the user presses or clicks the drop down icon.
-  - And each plan section will have a detailed week based workout plan for the users to look at.
+  - This section is for the user to pick their choice.
+  - There is 4 buttons to choose from, consisting of the elements, 'Electricity', 'Fire', 'Water' and 'Earth'.
+  - Once the user picks one of the elements, their choice will be displayed below the buttons in the 'You chose' section.
 
-![Workout plans](https://github.com/mushfique44/going-gym/blob/main/media/workout_section.PNG)
+![Players choice](https://github.com/mushfique44/elementals/blob/main/media/player_choice.jpg)
 
-- __Lean, Bulk and Weight Loss Workout Plans__
-  - This is how it looks when the user drops the section down.
-  - It gives the user a detailed plan that they can follow on a weekly basis.
-  - All three are week based plans but have differnet workouts for the user to follow as best fit for them
+- __Computer's Choice Section__
 
-![Lean plans](https://github.com/mushfique44/going-gym/blob/main/media/lean_workout.PNG)
+  - This section is similar to the 'Players choice' section but this where the computer choice will display.
+  - This section will display the computers choice and will not have buttons as this choice is completely randomised.
+  - Onces the user has picked an element then will the computer choice be displayed.
 
-![Bulk plans](https://github.com/mushfique44/going-gym/blob/main/media/bulk_workout.PNG)
+![Comps choice](https://github.com/mushfique44/elementals/blob/main/media/computer_choice.jpg)
 
-![Loss plans](https://github.com/mushfique44/going-gym/blob/main/media/loss_workout.PNG)
-  
-- __Sign-Up section__
+- __Winner of the Round__
 
-  - This section is for users to sign up to a personalised workout plan, by wflling in a form.
-  - The form will request the users Full name, Email address and what type of personalised workout plan they are looking for.
-  - This form is set on a dumbell background to give the users motivation when they sign up.
+  - Once the player has picked and the computers choice has been randomised the round will end and the winner of the round will be displayed at the bottom of both those sections.
 
-![Sign up form](https://github.com/mushfique44/going-gym/blob/main/media/signup_section.PNG)
+![End of Round](https://github.com/mushfique44/elementals/blob/main/media/end_of_round.jpg)
 
-- __The Footer__
+- __The Scorecard__
 
-  - The footer section is for all the social media pages related to the website Going Gym. All the social links will open to new tabs for the users to give ease of access and better navigation.
+  - This section is where the scores of the game will display.
+  - If the winner of the round is the user, the 'Wins' tally will increase and if the computer wins then the 'Losses' tally increase. (Note: Draws are not tallied)
+  - It will also tally the number of rounds played.
 
-![Footer](https://github.com/mushfique44/going-gym/blob/main/media/footer.PNG)
+![Scorecard](https://github.com/mushfique44/elementals/blob/main/media/score_area.jpg)
+
+- __The End Game Screen__
+
+  - Once five round are complete, the game ends and a 'End Game' screen will appear and will display the winner of the whole game.
+
+![End Game](https://github.com/mushfique44/elementals/blob/main/media/end_game.jpg)
 
 ### Features Left to Implement
 
