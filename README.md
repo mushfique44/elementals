@@ -70,51 +70,54 @@ There are seven sections to this webpage:
 - __The End Game Screen__
 
   - Once five round are complete, the game ends and a 'End Game' screen will appear and will display the winner of the whole game.
+  - Note: game can end in a Draw.
+  - The screen will prompt you restart the game to play the game again.
 
 ![End Game](https://github.com/mushfique44/elementals/blob/main/media/end_game.jpg)
 
 ### Features Left to Implement
 
-- Another feature idea is to implement these sections into pages and having them be easy to navigate around.
-- To make the week based workout plans to appear in a weekly calander format when the screen sizes are larger, so it makes it more appealing to the user and easier to follow.
-- Have a gallary page with images of users transformations and experiences of using the workout plans.
-- Make the sign up form more detailed so that it request more information by giving a questionare.
+- Add images of the elements to display when the choices are selected by both user and computer.
+- Have tie-breaker round if the game ends in a Draw after five rounds.
+- Add more elements to make the game more complex.
 
 ## Testing
 
 This website has been tested to work on chrome, microsoft edge and firefox.
 The web page is responsive, looks good and is functional on all screen sizes. This was checked using the inspect element feature on google chrome.
-The sign up form has been tested and works perfectly. It will require the user to input in all fields and make sure the email is in correct format.
 All sections of the webpage are easy to read and understand.
 
 ### Validator Testing
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmushfique44.github.io%2Fgoing-gym%2F)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmushfique44.github.io%2Felementals)
 
-![W3S HTML](https://github.com/mushfique44/going-gym/blob/main/media/w3c_html.PNG)
+![W3S HTML](https://github.com/mushfique44/elementals/blob/main/media/HTML_checker.jpg)
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=mushfique44.github.io%2Fgoing-gym&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=mushfique44.github.io%2Felementals&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![W3C CSS](https://github.com/mushfique44/going-gym/blob/main/media/w3c_css.PNG)
+![W3C CSS](https://github.com/mushfique44/elementals/blob/main/media/CSS_checker.jpg)
+
+- JavaScript
+  - No errors were found when running the code through the official [Jshint validator](https://jshint.com/)
+
+![Jshint JavaScript](https://github.com/mushfique44/elementals/blob/main/media/JS_code_checker.jpg)
 
 - Accessability
   - The accessabilty scores are as follows, done through the website [Page Speed Insight](https://pagespeed.web.dev/)
 
-![Page Speed Insight](https://github.com/mushfique44/going-gym/blob/main/media/page_speed.PNG)
+![Page Speed Insight](https://github.com/mushfique44/elementals/blob/main/media/performance_desktop.jpg)
 
-![Page Speed Insight Mobile](https://github.com/mushfique44/going-gym/blob/main/media/page_speed_mobile.PNG)
+![Page Speed Insight Mobile](https://github.com/mushfique44/elementals/blob/main/media/performance_mobile.jpg)
 
-### Unfixed Bugs
+### fixed Bugs
 
-There is only one bug that has been noticed and that is the body images in the workout section do not align properly when the workout plans are expanded as shown below. This is because of the way the images were posiioned in each div element meant that they could not be refered to when the checkbox was checked. However this is not the case when all the section are expanded out at the same time, as all the body images get hidden. Because of the layout of the HTML code it was very challenging to figure (in CSS) out how to get the images to hide while some of the sections where expanded. This would be an easy solve with JAVA script as it can do more complicated executions.
-
-![Unfixed Bug](https://github.com/mushfique44/going-gym/blob/main/media/unfixed_bug.PNG)
+  - There was button bug. Originally the help button was a button tag and the bug that arose from that was, everytime the help button was clicked the game would count it as a pick and the score tallys will increment randomly. To fix this the tag was changed from a button to div tag and the click code was able to read the div with associated div class name.  
 
 ## Deployment
 
-Github and codeanywhere was used to write and store the code for this website:
+Github and codeanywhere was originally used but had to be changed to gitpod and was used in the second half of the project, to write the code:
 
 - Github pages was used to deploy the website. The steps to deploy are as follows:
   - In the GitHub repository, navigate to the Settings tab
@@ -123,18 +126,17 @@ Github and codeanywhere was used to write and store the code for this website:
   - In the Branches section select 'main' and '/(root)', and then hit save
   - Once its saved refresh page a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - <https://mushfique44.github.io/going-gym>
+The live link can be found here - <https://mushfique44.github.io/elementals>
 
 ## Credits
 
-The content idea was inspired by myself but some of the features of the website was inspired from different websites.
+The content idea was inspired by Rock/Paper/Sissor style game and the media contents Avatar: Last Airbender and Pokemon.
 
 ### Content
 
-- The layout of the webiste was inspired by the 'Coding Club' website given by code-institute
-- The header and footer section was inspired by the 'Love Running' website given by code-institut
+- Some of the JS code of the webiste was inspired by the content from code-institute
 
 ### Media
 
-- All images where used are license free and were taken from [Vecteezy](https://www.vecteezy.com/)
+- All images where used are license free and were taken from [FreeImages](https://www.freeimages.com/)
 - All the icons were taken from [Font Awesome](https://fontawesome.com/)
